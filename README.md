@@ -24,8 +24,10 @@ The code was tested with Python 3.6. To use this code, please do:
 2. Install dependencies:
 
    ```sh
-   pip install tensorflow keras matplotlib pandas
+   pip install numpy==1.16.4 pandas scipy tensorflow==1.14 keras matplotlib jupyter
    ```
+
+   Note that the latest version of `tensorflow` is `2.0`, while the **core NN layers (P-RNN)** is built under `tensorflow 1.x`. For this implementation, `tensorflow v1.14` is recommended.
 
 3. Start `Jupyter Notebook` and run the `demo_single_model` locally.
 
@@ -34,4 +36,3 @@ The code was tested with Python 3.6. To use this code, please do:
 - `libs\` -- Library for core NN layers (P-RNN) and other utilities (e.g., CAMELS data pre-processing and model evaluation).
 - `demos\` -- The folder contains demo data for running `demo_single_model`.
 - `data\` -- Download and unzip CAMELS datasets into this directory.
-

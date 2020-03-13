@@ -6,7 +6,10 @@ The code demonstrates the Keras implementation of the hybrid DL model as propose
 
 Please refer to the file `License.txt` for the license governing this code.
 
-If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at shijie.jiang(at)hotmail.com
+If you use this repository in your work, please cite:
+
+
+If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
 
 ------
 

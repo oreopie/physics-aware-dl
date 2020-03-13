@@ -34,14 +34,14 @@ The code was tested with Python 3.6. To use this code, please do:
 ```shell
 camels
 |---basin_mean_forcing
-|		|---daymet
-|				|---01
-|				|---...	
-|				|---18	
+|   |---daymet
+|       |---01
+|       |---...	
+|       |---18	
 |---usgs_streamflow
-		|---01
-		|---...	
-		|---18	
+    |---01
+    |---...	
+    |---18
 ```
 
 4. Start `Jupyter Notebook` and run the `demo_single` locally.

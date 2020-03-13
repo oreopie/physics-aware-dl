@@ -32,16 +32,16 @@ The code was tested with Python 3.6. To use this code, please do:
 3. Download CAMELS (Catchment Attributes and Meteorology for Large-sample Studies) data set  `CAMELS time series meteorology, observed flow, meta data (.zip) `  from [https://ral.ucar.edu/solutions/products/camels](https://ral.ucar.edu/solutions/products/camels). Unzip `basin_timeseries_v1p2_metForcing_obsFlow.zip` and reorganize the directory as follows,
 
    ```
-   camels
-   |---basin_mean_forcing
-   |   |---daymet
-   |       |---01
+   camels\
+   |---basin_mean_forcing\
+   |   |---daymet\
+   |       |---01\
    |       |---...	
-   |       |---18	
-   |---usgs_streamflow
-       |---01
+   |       |---18	\
+   |---usgs_streamflow\
+       |---01\
        |---...	
-       |---18
+       |---18\
    ```
 
 

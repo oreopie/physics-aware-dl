@@ -16,14 +16,14 @@ The code was tested with Python 3.6. To use this code, please do:
 
 1. Clone the repo:
 
-   ```sh
+   ```shell
    git clone https://github.com/oreopie/physics-aware-dl.git
    cd physics-aware-dl
    ```
 
 2. Install dependencies:
 
-   ```sh
+   ```shell
    pip install numpy==1.16.4 pandas scipy tensorflow==1.14 keras matplotlib jupyter
    ```
 
@@ -31,18 +31,19 @@ The code was tested with Python 3.6. To use this code, please do:
 
 3. Download CAMELS (Catchment Attributes and Meteorology for Large-sample Studies) data set  `CAMELS time series meteorology, observed flow, meta data (.zip) `  from [https://ral.ucar.edu/solutions/products/camels](https://ral.ucar.edu/solutions/products/camels). Unzip `basin_timeseries_v1p2_metForcing_obsFlow.zip` and reorganize the directory as follows,
 
-```shell
-camels
-|---basin_mean_forcing
-|   |---daymet
-|       |---01
-|       |---...	
-|       |---18	
-|---usgs_streamflow
-    |---01
-    |---...	
-    |---18
-```
+   ```
+   camels
+   |---basin_mean_forcing
+   |   |---daymet
+   |       |---01
+   |       |---...	
+   |       |---18	
+   |---usgs_streamflow
+       |---01
+       |---...	
+       |---18
+   ```
+
 
 4. Start `Jupyter Notebook` and run the `demo_single` locally.
 

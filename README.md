@@ -29,7 +29,22 @@ The code was tested with Python 3.6. To use this code, please do:
 
    Note that the latest version of `tensorflow` is `2.0`, while the **core NN layers (P-RNN)** is built under `tensorflow 1.x`. For this implementation, `tensorflow v1.14` is recommended.
 
-3. Start `Jupyter Notebook` and run the `demo_single_model` locally.
+3. Download CAMELS (Catchment Attributes and Meteorology for Large-sample Studies) data set  `CAMELS time series meteorology, observed flow, meta data (.zip) `  from [https://ral.ucar.edu/solutions/products/camels](https://ral.ucar.edu/solutions/products/camels). Unzip `basin_timeseries_v1p2_metForcing_obsFlow.zip` and reorganize the directory as follows,
+
+```shell
+camels
+|---basin_mean_forcing
+|		|---daymet
+|				|---01
+|				|---...	
+|				|---18	
+|---usgs_streamflow
+		|---01
+		|---...	
+		|---18	
+```
+
+4. Start `Jupyter Notebook` and run the `demo_single` locally.
 
 ## About the `PRNNLayer`
 

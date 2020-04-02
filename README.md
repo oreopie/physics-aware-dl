@@ -1,4 +1,4 @@
-# A physics-aware DL model for hydrological modeling
+# A hydrology-aware DL model for runoff modeling
 
 **The code will be released soon.**
 
@@ -8,7 +8,7 @@ Please refer to the file `License.txt` for the license governing this code.
 
 If you use this repository in your work, please cite:
 
-**Jiang S., Zheng Y., and Solomatine D. (2019) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. Unpublished work.**
+**Jiang S., Zheng Y., and Solomatine D. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. Unpublished work.**
 
 If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
 

@@ -1,7 +1,18 @@
+"""
+This file is part of the accompanying code to our manuscript:
+
+Jiang, S., Zheng, Y., and Solomatine, D. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning, Geophysical Research Letters, XX(XX), XX–XX
+
+Copyright 2020 Shijie Jiang. All rights reserved.
+
+You should have received a copy of the Apache-2.0 license along with the code. If not,
+see <https://opensource.org/licenses/Apache-2.0>
+"""
+
 import os
 import pandas as pd
 import numpy as np
-
+from datetime import datetime
 
 class DataforIndividual():
     def __init__(self, working_path, basin_id):
@@ -43,47 +54,12 @@ class DataforIndividual():
                                  sep='\t', header=0, dtype={'HUC': str, 'BASIN_ID': str})
         self.check_validation(basin_list, self.basin_id)
         huc_id = basin_list[basin_list['BASIN_ID'] == self.basin_id]['HUC'].values[0]
-        print('Now load data in basin #{} at huc #{}.'.format(self.basin_id, huc_id))
         forcing_data, area = self.load_forcing_data(self.working_path, huc_id, self.basin_id)
         flow_data = self.load_flow_data(self.working_path, huc_id, self.basin_id, area)
         merged_data = pd.merge(forcing_data, flow_data, on='date')
-        merged_data = merged_data[(merged_data['date'] >= pd.datetime(1980, 10, 1)) &
-                                  (merged_data['date'] <= pd.datetime(2010, 9, 30))]
+        merged_data = merged_data[(merged_data['date'] >= datetime(1980, 10, 1)) &
+                                  (merged_data['date'] <= datetime(2010, 9, 30))]
         merged_data = merged_data.set_index('date')
         pd_data = merged_data[['prcp(mm/day)', 'tmean(C)', 'dayl(day)', 'srad(W/m2)', 'vp(Pa)', 'flow(mm)']]
-
+        print('Data in basin #{} at huc #{} has been successfully loaded.'.format(self.basin_id, huc_id))
         return pd_data
-
-
-class DataofAttributes():
-    def __init__(self, working_path):
-        self.working_path = working_path
-
-    def load_attr_data(self, working_path):
-        attr_folder = os.path.join(working_path, 'camels', 'camels_attributes_v2.0')
-        clim_data = pd.read_csv(f"{attr_folder}/camels_clim.txt", sep=";", header=0, dtype={'gauge_id': str})
-        topo_data = pd.read_csv(f"{attr_folder}/camels_topo.txt", sep=";", header=0, dtype={'gauge_id': str})
-        vege_data = pd.read_csv(f"{attr_folder}/camels_vege.txt", sep=";", header=0, dtype={'gauge_id': str})
-        soil_data = pd.read_csv(f"{attr_folder}/camels_soil.txt", sep=";", header=0, dtype={'gauge_id': str})
-        geol_data = pd.read_csv(f"{attr_folder}/camels_geol.txt", sep=";", header=0, dtype={'gauge_id': str})
-
-        clim_data = clim_data[
-            ['gauge_id', 'p_mean', 'pet_mean', 'p_seasonality', 'frac_snow', 'aridity', 'high_prec_freq',
-             'high_prec_dur', 'low_prec_freq', 'low_prec_dur']].set_index('gauge_id')
-        topo_data = topo_data[['gauge_id', 'elev_mean', 'slope_mean', 'area_geospa_fabric']].set_index('gauge_id')
-        vege_data = vege_data[['gauge_id', 'frac_forest', 'lai_max', 'lai_diff', 'gvf_max', 'gvf_diff']].set_index(
-            'gauge_id')
-        soil_data = soil_data[['gauge_id', 'soil_depth_pelletier', 'soil_depth_statsgo', 'soil_porosity',
-                               'soil_conductivity', 'max_water_content', 'sand_frac', 'silt_frac', 'clay_frac',
-                               'organic_frac']].set_index('gauge_id')
-        geol_data = geol_data[['gauge_id', 'geol_permeability']].set_index('gauge_id')
-
-        dfs = [clim_data, topo_data, vege_data, soil_data, geol_data]
-        return pd.concat(dfs, join='outer', axis=1)
-
-    def load_data(self):
-        basin_list = pd.read_csv(os.path.join(self.working_path, 'basin_list.txt'),sep='\t', header=0,
-                                 usecols=['BASIN_ID'], dtype={'BASIN_ID': str}).values[:, 0].tolist()
-        attr_data = self.load_attr_data(self.working_path)
-
-        return attr_data.loc[basin_list]

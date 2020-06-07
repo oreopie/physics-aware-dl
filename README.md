@@ -1,13 +1,13 @@
 # A hydrology-aware DL model for runoff modeling
 [![DOI](https://zenodo.org/badge/241771877.svg)](https://zenodo.org/badge/latestdoi/241771877)
 
-The code demonstrates the Keras implementation of the hybrid DL model as proposed in paper "***Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning***" (which has been submitted to a journal for peer-reviewing).
+The code demonstrates the Keras implementation of the hybrid DL model as proposed in paper "***Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning***"  published in *Geophysical Research Letters*. [[link to paper]]()
 
 Please refer to the file `License.txt` for the license governing this code.
 
 If you use this repository in your work, please cite:
 
-**Jiang S., Zheng Y., and Solomatine D. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. Unpublished work.**
+> **Jiang S., Zheng Y., and Solomatine D. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. (accepted).**
 
 If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
 
@@ -47,8 +47,7 @@ The code was tested with Python 3.6. To use this code, please do:
        |---18\
    ```
 
-
-4. Start `Jupyter Notebook` and run the `demo_single` locally.
+4. Start `Jupyter Notebook` and run the `demo_single.ipynb` locally.
 
 ## About the `PRNNLayer`
 

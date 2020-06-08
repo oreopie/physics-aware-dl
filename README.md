@@ -1,5 +1,5 @@
 # A hydrology-aware DL model for runoff modeling
-[![DOI](https://zenodo.org/badge/241771877.svg)](https://zenodo.org/badge/latestdoi/241771877)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.3856486-blue.svg)](https://doi.org/10.5281/zenodo.3856486)
 
 The code demonstrates the Keras implementation of the hybrid DL model as proposed in paper "***Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning***"  published in *Geophysical Research Letters*. [[link to paper]]()
 

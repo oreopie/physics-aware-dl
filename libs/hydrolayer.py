@@ -2,7 +2,8 @@
 This file is part of the accompanying code to our manuscript:
 
 Jiang S., Zheng Y., & Solomatine D.. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. Geophysical Research Letters, 47, e2020GL088229. https://doi.org/10.1029/2020GL088229
-Copyright 2020 Shijie Jiang. All rights reserved.
+
+Copyright (c) 2020 Shijie Jiang. All rights reserved.
 
 You should have received a copy of the Apache-2.0 license along with the code. If not,
 see <https://opensource.org/licenses/Apache-2.0>

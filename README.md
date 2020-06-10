@@ -7,7 +7,7 @@ Please refer to the file `License.txt` for the license governing this code.
 
 If you use this repository in your work, please cite:
 
-> **Jiang S., Zheng Y., & Solomatine D.. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. Geophysical Research Letters, 47, e2020GL088229. https://doi.org/10.1029/2020GL088229**
+> **Jiang S., Zheng Y., & Solomatine D.. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. *Geophysical Research Letters*, 47. DOI: 10.1029/2020GL088229**
 
 If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
 

@@ -27,7 +27,7 @@ The code was tested with Python 3.6. To use this code, please do:
 2. Install dependencies:
 
    ```shell
-   pip install numpy==1.16.4 pandas scipy tensorflow==1.14 keras matplotlib jupyter
+   pip install numpy==1.16.4 pandas scipy tensorflow==1.14 keras==2.3.1 matplotlib jupyter
    ```
 
    Note that the latest version of `tensorflow` is `2.0`, while the **core NN layers (P-RNN)** is built under `tensorflow 1.x`. For this implementation, `tensorflow v1.14` is recommended.

@@ -13,7 +13,7 @@ If you use this repository in your work, please cite:
 
 > **Jiang S., Zheng Y., & Solomatine D.. (2020) Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning. *Geophysical Research Letters*, 47. DOI: 10.1029/2020GL088229**
 
-If you have any questions or suggestions with the code or find a bug, please let us know. Contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
+If you have any questions or suggestions with the code or find a bug, please let us know. You are welcome to [raise an issue here](https://github.com/oreopie/physics-aware-dl/issues) or contact Shijie Jiang at *jiangsj(at)mail.sustech.edu.cn*
 
 ------
 

@@ -2,7 +2,7 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.3856486-blue.svg)](https://doi.org/10.5281/zenodo.3856486)
 - [Overview](#overview)
 - [Quick Start](#quick-start)
-- [Tips on regional model](#tips-on-regional-model)
+- [Tips on the regional model](#tips-on-the-regional-model)
 
 ## Overview
 The code demonstrates the Keras implementation of the hybrid DL model as proposed in paper "***Improving AI system awareness of geoscience knowledge: Symbiotic integration of physical approaches and deep learning***"  published in *Geophysical Research Letters*. [[link to the paper]](https://doi.org/10.1029/2020GL088229)
@@ -54,7 +54,7 @@ The code was tested with Python 3.6. To use this code, please do:
 4. Start `Jupyter Notebook` and run the `demo_single.ipynb` locally.
 ------
 
-## Tips on regional model
+## Tips on the regional model
 
 To implement the regional model (main pipeline + parameterization pipeline) as developed in the study, we provide `RegionalPRNNLayer`, `RegionalConv1Layer`, and `RegionalConv2Layer` classes in the `libs\hydrolayer.py`. Below is a demo to use the classes for buiding the regional model:
 

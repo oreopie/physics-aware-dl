@@ -59,9 +59,11 @@ The code was tested with Python 3.6. To use this code, please do:
 To implement the regional model (main pipeline + parameterization pipeline) as developed in the study, we provide `RegionalPRNNLayer`, `RegionalConv1Layer`, and `RegionalConv2Layer` classes in the `libs\hydrolayer.py`. Below is a demo to use the classes for buiding the regional model:
 
    ```python
+from keras.models import Model
+from keras.layers import Input, Concatenate
 from libs.hydrolayer import RegionalPRNNLayer, RegionalConv1Layer, RegionalConv2Layer, ScaleLayer
 
-x_forcing = Input(shape=train_forcing[0].shape[], name='Input_forcing')
+x_forcing = Input(shape=train_forcing[0].shape, name='Input_forcing')
 x_attrs   = Input(shape=train_attrs[0].shape, name='Input_attrs')
 hydro = RegionalPRNNLayer(h_nodes=32, seed=200, name='RegionalPRNN')([x_forcing, x_attrs])
 
